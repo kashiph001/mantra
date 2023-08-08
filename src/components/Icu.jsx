@@ -61,7 +61,7 @@ const Icu = () => {
         </div>
       </div>
       {[...Array(bedCount)].map((_, index) => (
-        <Bed bedCount={bedCount} key={index} />
+        <Bed bedCount={index + 1} key={index} />
       ))}
       <div className="relative w-848 h-112 mt-10" onClick={addBed}>
         <textarea
