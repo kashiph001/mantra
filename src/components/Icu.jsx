@@ -63,14 +63,17 @@ const Icu = () => {
       {[...Array(bedCount)].map((_, index) => (
         <Bed bedCount={bedCount} key={index} />
       ))}
-      <div className="flex items-center gap-2 mt-4">
-        <p className="text-white">Add another bed</p>
-        <span
-          className="flex items-center justify-center rounded-full bg-custom-color cursor-pointer w-8 h-8"
-          onClick={addBed}
-        >
-          <FaPlus className="text-white" />
-        </span>
+      <div className="relative w-848 h-112 mt-10" onClick={addBed}>
+        <textarea
+          className="w-full h-full px-3 py-2 border rounded-md bg-gray-700 focus:ring focus:ring-blue-300 resize-none"
+          disabled
+          style={{ backgroundColor: "rgb(70, 70, 70)", border: "none" }}
+        ></textarea>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="text-white">
+            <FaPlus />
+          </span>
+        </div>
       </div>
     </>
   );
